@@ -1,0 +1,62 @@
+server:
+  port: 1001
+  error:
+    include-stacktrace: never
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+      routes:
+        - id: component-processing-service-id
+          uri: lb://component-processing-service
+          predicates:
+            - Path=/returns/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: component-processing-service-id
+                fallbackUri: forward:/returnFallback
+
+        - id: payment-service-id
+          uri: lb://payment-service
+          predicates:
+            - Path=/payments/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: payment-service-id
+                fallbackUri: forward:/paymentFallback
+
+        - id: packaging-delivery-service-id
+          uri: lb://packaging-and-delivery-service
+          predicates:
+            - Path= /packagingAndDelivery/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: packaging-delivery-service-id
+                fallbackUri: forward:/packagingAndDeliveryFallback
+
+        - id: authentication-service-id
+          uri: lb://authentication-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: authentication-service-id
+                fallbackUri: forward:/authFallback
