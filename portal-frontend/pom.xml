@@ -91,6 +91,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>portal</finalName>
     </build>
 
 </project>

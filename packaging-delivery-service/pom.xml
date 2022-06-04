@@ -93,6 +93,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>packaging-delivery</finalName>
     </build>
 
 </project>

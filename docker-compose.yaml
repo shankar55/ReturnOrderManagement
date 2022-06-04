@@ -4,7 +4,7 @@ services:
     container_name: eureka-service
     image: eureka-service
     ports:
-      - 1000:1000
+      - 8761:8761
   authentication-service:
     container_name: authentication-service
     image: authentication-service

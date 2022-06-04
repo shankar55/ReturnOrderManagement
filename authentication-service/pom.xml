@@ -139,6 +139,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>authentication</finalName>
     </build>
 
 </project>
