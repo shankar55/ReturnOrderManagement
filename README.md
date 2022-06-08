@@ -1,12 +1,12 @@
-<h1 style="text-align:center">ReturnOrderManagement</h1>
+<h1 style="text-align:center;color:Orange">ReturnOrderManagement</h1>
 --->we have automated the return order management through an web app, by classifying the process by repair or replacement.
--------------------------------------------------------------------------------------------------------------
+<hr style="color:gray">
 <h3 style="text-align:center">Microservice Architecture</h3>
 --->Microservices are a modern approach to software whereby application code is delivered in small,manageable pieces, independent of others.
--------------------------------------------------------------------------------------------------------------
+<hr style="color:gray">
 <h3 style="text-align:center">System Architecture Diagram</h3>
 <img src="images/ArchitectureDiag.PNG">
--------------------------------------------------------------------------------------------------------------
+<hr style="color:gray">
 <h3 style="text-align:center">Eureka-Server</h3>
 --->Eureka Server(Service-Registry) is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
 
@@ -73,4 +73,4 @@ BaseURL:http://localhost:8761
 <h6>-->we need to clean the project in the project option.</h6>
 
 -------------------------------------------------------------------------------------------------------------------
-Developed by: K Shankar
+<h2 style="color:DodgerBlue><em>Developed by: K Shankar</em></h2>
