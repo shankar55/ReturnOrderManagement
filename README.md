@@ -73,4 +73,4 @@ BaseURL:http://localhost:8761
 <h6>-->we need to clean the project in the project option.</h6>
 
 -------------------------------------------------------------------------------------------------------------------
-<h2 style="color:DodgerBlue><em>Developed by: K Shankar</em></h2>
+<h2 style="color:DodgerBlue>Developed by: K Shankar</h2>
